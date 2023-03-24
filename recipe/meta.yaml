@@ -1,5 +1,5 @@
 {% set name = "otpauth" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/otpauth-{{ version }}.tar.gz
-  sha256: dd0813cb5c0ac1c98d888f9a96e587254829a61e856550ebf334187f601ff9fc
+  sha256: 24f41509f9b99c2fd8aef386eefe3a2d58b7601ec23d4af41c487bcee3954359
 
 build:
   number: 0
@@ -34,7 +34,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Implements two-step verification of HOTP/TOTP'
+  summary: Implements two-step verification of HOTP/TOTP
   description: |
     otpauth is One Time Password Authentication, which is usually called
     as two steps verification. You may have heard it from Google, Dropbox
