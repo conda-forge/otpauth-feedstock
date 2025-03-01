@@ -1,5 +1,5 @@
 {% set name = "otpauth" %}
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/otpauth-{{ version }}.tar.gz
-  sha256: e09ed63a01b35acd78b7bb0f981fdcdbd1d9d9c01be1a3e0d7024c65d0e74e2a
+  sha256: 12fdae64d0664ffbfafdadfdc1ec8fe571acd0e71a62f79233dd3bda088d39c2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,7 +18,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
 
