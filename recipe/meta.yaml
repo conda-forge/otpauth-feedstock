@@ -1,13 +1,13 @@
 {% set name = "otpauth" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/otpauth-{{ version }}.tar.gz
-  sha256: 169a7adbd715fca687f6a66d02ccdbefc229fb49f8a634b958d286f908134d59
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/otpauth-{{ version }}.tar.gz
+  sha256: d4306790ef1bfb3b18216cff7160328f89ea26a04f89079d7a60216f78084bcc
 
 build:
   number: 0
