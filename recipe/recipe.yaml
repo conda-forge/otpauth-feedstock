@@ -1,0 +1,49 @@
+schema_version: 1
+
+context:
+  name: otpauth
+  version: "2.2.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/otpauth-${{ version }}.tar.gz
+  sha256: d4306790ef1bfb3b18216cff7160328f89ea26a04f89079d7a60216f78084bcc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - hatchling
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - otpauth
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Implements two-step verification of HOTP/TOTP
+  description: |
+    otpauth is One Time Password Authentication, which is usually called
+    as two steps verification. You may have heard it from Google, Dropbox
+    and etc.
+  homepage: https://github.com/lepture/otpauth
+  repository: https://github.com/lepture/otpauth
+  documentation: https://pythonhosted.org/otpauth/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
