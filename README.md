@@ -17,7 +17,6 @@ otpauth is One Time Password Authentication, which is usually called
 as two steps verification. You may have heard it from Google, Dropbox
 and etc.
 
-
 Current build status
 ====================
 
